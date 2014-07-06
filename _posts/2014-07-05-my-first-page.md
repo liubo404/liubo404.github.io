@@ -8,4 +8,4 @@ tags: []
 {% include JB/setup %}
 
 ##First page from jekyll bootstrap....
-
+<img src="/img/purcell_emacs.png"/>
