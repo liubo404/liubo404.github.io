@@ -5,6 +5,11 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
+##liubo404's Home Page
+    Resume
+    Programmer...want to be a CodeGuru...too hard to be...
+
+
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
