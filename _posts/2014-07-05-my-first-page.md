@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "My First Page"
-description: ""
+description: "test of the jekyll bootstrap"
 category: 
 tags: []
 ---
-{% include JB/setup %}
+--{% include JB/setup %}
