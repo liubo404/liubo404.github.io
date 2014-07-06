@@ -10,4 +10,4 @@ tags: []
 ##pucell emacs config
 <img src="img/purcell_emacs.png"/>
 
-<img src='img/purcell_emacs.png' />
+<img src='../img/purcell_emacs.png' />
