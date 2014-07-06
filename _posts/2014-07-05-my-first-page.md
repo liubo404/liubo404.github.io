@@ -7,5 +7,5 @@ tags: []
 ---
 {% include JB/setup %}
 
-##first page from jekyll bootstrap....
+##First page from jekyll bootstrap....
 
