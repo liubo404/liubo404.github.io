@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "My First Page"
-description: "test of the jekyll bootstrap"
+description: "n"
 category: 
 tags: []
 ---
 {% include JB/setup %}
 
-##First page from jekyll bootstrap....
-<img src="/img/purcell_emacs.png"/>
+##pucell emacs config
+    <img src="img/purcell_emacs.png"/>
