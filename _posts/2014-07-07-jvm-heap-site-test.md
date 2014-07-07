@@ -8,6 +8,4 @@ tags: []
 {% include JB/setup %}
 
 ##JVM heap site test through Runtime
-<img src='/img/JVM_heapsize1.png' />
-<img src='/img/JVM_heapsize2.png' />
-<img src='/img/JVM_heapsize3.png' />
+<img src='/img/jvm_heap_size.png' />
