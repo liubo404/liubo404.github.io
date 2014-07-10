@@ -6,6 +6,8 @@ category:
 tags: []
 ---
 {% include JB/setup %}
+
+<img src='/img/java_static.png'/>
     //public static class staticTest{
     public class staticTest{
         public static void main(String[] args) {
