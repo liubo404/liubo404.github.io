@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: liubo404's Home Page
 ---
 {% include JB/setup %}
 
-##liubo404's Home Page
+
     Resume
     Programmer...want to be a CodeGuru...too hard to be...
 
