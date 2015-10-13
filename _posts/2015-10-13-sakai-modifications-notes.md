@@ -8,6 +8,6 @@ tags: []
 {% include JB/setup %}
 
 1.bigbluebutton integration steps  
-  -install BBB server  
-  -install BBB war to tomcat home  
+  - insetall BBB server
+  - install BBB war to tomcat home 
   - config the BBB client url and salt from the server  
