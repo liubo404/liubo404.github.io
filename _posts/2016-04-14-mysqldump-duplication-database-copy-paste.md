@@ -22,3 +22,9 @@ mysqldump -u root -ppassword tiantian | mysql -u root -ppassword tiantian_test;
 ```sql
 	ALTER TABLE t_seller ADD UNIQUE (usernem);
 ```
+
+
+# modify timestamp column set default value
+```sql
+alter table t_voluntary_news MODIFY create_time timestamp default CURRENT_TIMESTAMP not null
+```
