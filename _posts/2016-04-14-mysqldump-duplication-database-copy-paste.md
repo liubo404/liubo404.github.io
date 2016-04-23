@@ -28,3 +28,10 @@ mysqldump -u root -ppassword tiantian | mysql -u root -ppassword tiantian_test;
 ```sql
 alter table t_voluntary_news MODIFY create_time timestamp default CURRENT_TIMESTAMP not null
 ```
+
+# find duplicate rows
+
+SELECT seq, COUNT(*) c FROM t_card GROUP BY seq HAVING c > 1;
+
+# change id auto increament value
+ALTER TABLE tablename AUTO_INCREMENT = 1000
