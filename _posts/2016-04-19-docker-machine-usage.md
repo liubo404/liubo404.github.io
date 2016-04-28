@@ -3,7 +3,7 @@ layout: post
 title: "docker machine usage"
 description: ""
 category: 
-tags: []
+tags: [docker]
 ---
 {% include JB/setup %}
 
@@ -57,3 +57,4 @@ Click “Save Private Key”.
 Use the saved file to login with PuTTY using docker@127.0.0.1:2022
 
 
+<img src="/img/dm-docker.png"/>
