@@ -7,4 +7,4 @@ tags: [mysql]
 ---
 {% include JB/setup %}
 
-<img src="/img/mysql-timstamp.png"/>
+<img src="/img/mysql-timestamp.png"/>
