@@ -1,0 +1,23 @@
+{
+    "data": {
+        "item_no": "AO2111160461",
+        "item_type": "1409842915260760066",
+        "title": "调研出差",
+        "fee_total": 123,
+        "ticket_count": 0,
+        "before_id": null,
+        "fee_data": [
+            {
+                "id": "1460448468844208129",
+                "amount": 123,
+                "feeType": "1408724828877365555",
+                "type": 1,
+                "standard": 0,
+                "feeId": "1408724828877365555"
+            }
+        ],
+        "reimburser_id": "1411161953669292034"
+    },
+    "formDataId": "",
+    "id": "1457623833849761792"
+}
