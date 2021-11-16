@@ -1,6 +1,6 @@
 ---
 layout: page
-title: liubo404's Home Page
+title: Weir Wave
 ---
 {% include JB/setup %}
 
@@ -9,7 +9,7 @@ title: liubo404's Home Page
     Programmer...want to be a CodeGuru...too hard to be...
 
 
-##My Posts
+## My Posts
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
