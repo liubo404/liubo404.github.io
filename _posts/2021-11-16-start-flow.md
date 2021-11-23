@@ -128,7 +128,11 @@ test.json
 
 ```
 
-jmeter jmx
+## jmeter jmx
+
+```
+jmeter.sh  -n -t  ./startFlow.jmx -l s1.jtl -e -o ./report/
+```
 
 ```xml
  
