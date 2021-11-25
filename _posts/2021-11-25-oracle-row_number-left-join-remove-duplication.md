@@ -47,3 +47,47 @@ FROM TBL_FORM_MODEL f
 WHERE f.DELETED = 0
 order by f.id;
 ```
+
+
+ref:https://stackoverflow.com/questions/45480825/oracle-sql-duplicate-rows-when-joining-new-table
+
+If joining another table into an existing query causes the existing rows to be duplicated, it is because the table being joined in has duplicate values in the columns that are being used as keys for the join
+
+In your case, if you do
+
+```
+SELECT ENTITY_KEY FROM EVALUATE_RULE GROUP BY ENTITY_KEY HAVING COUNT(*) > 1
+```
+
+You'll see which entity_keys are duplicated. When these duplicates are joined to the existing data, the existing data has to be doubled up to permit both rows from EVALUATE_RULE with the same ENTITY_KEY to exist in the result set
+
+You must either de-dupe the table, or put other clauses into your ON condition to further restrict the rows coming from EVALUATE_RULE.
+
+For example, after adding EVALUATE_RULE and putting ER.* in your SELECT list, imagine that you can see that the rows from ER are status = 'old' and status = 'current' but you know you only want the current ones.. So put AND er.status = 'current' in your ON clause
+
+Your comment indicates that multiple records differ by some column you don't care about, so this technique will just select only one row:
+
+```
+LEFT JOIN 
+(SELECT e.*, ROW_NUMBER() OVER(PARTITION BY e.entity_key ORDER BY e.name) as rown FROM evaluate_rule e) er
+ON
+  er.entity_key = pr.account_key and 
+  er.rown = 1
+```
+
+If you want info on why this works, run that sql in isolation:
+
+```
+SELECT e.*, ROW_NUMBER() OVER(PARTITION BY e.entity_key ORDER BY e.name) as rown FROM evaluate_rule e
+```
+
+ORDER BY e.entity_key -- i added this to make it more clear what is going on. You don't need it in your main query
+It just assigns a number to each row in the table, the number restarts at 1 every time entity_key changes, so we can then select all those with rown = 1
+
+If it turns out you DO want something specific like "the latest row from evaluate_rule", you can use something like this:
+
+```
+SELECT e.*, ROW_NUMBER() OVER(PARTITION BY e.entity_key ORDER BY e.created_date DESC) as rown FROM evaluate_rule e
+```
+Now the latest created_date row will always have rown = 1
+ 
