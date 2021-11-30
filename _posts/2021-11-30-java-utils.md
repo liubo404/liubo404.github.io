@@ -34,5 +34,5 @@ for (String s : slist) system.debug(
     StringUtilities.isNumeric(s)
 );
 
-```
-ref:https://salesforce.stackexchange.com/questions/165092/how-to-check-if-string-is-decimal
+``` 
+ref: [stackoverflow](https://salesforce.stackexchange.com/questions/165092/how-to-check-if-string-is-decimal)。
