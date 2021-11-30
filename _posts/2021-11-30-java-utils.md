@@ -38,3 +38,5 @@ for (String s : slist) system.debug(
 ref: [stackoverflow](https://salesforce.stackexchange.com/questions/165092/how-to-check-if-string-is-decimal)。
 
 [baeldung](https://www.baeldung.com/java-check-string-number)
+
+[markdown](https://markdown.com.cn/basic-syntax/links.html)
