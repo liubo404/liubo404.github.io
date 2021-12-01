@@ -11,6 +11,7 @@ tags: [test]
 ```
 wrk  -t4 -c15 -d30s -s startFlow.lua http://172.16.101.209:9001/process/start
 
+wrk  -t4 -c15 -d30s -s commit.lua http://172.16.101.209:9001/process/commit
 ```
 
 - startfFlow.lua 
