@@ -6,6 +6,27 @@ category:
 tags: []
 ---
 {% include JB/setup %}
+# Oracle / PLSQL: Execute a SQL script file in SQLPlus
+
+```
+//To execute a script file in SQLPlus, type @ and then the file name.
+To execute a script file in SQLPlus, type @ and then the file name.
+
+SQL > @{file}
+For example, if your file was called script.sql, you'd type the following command at the SQL prompt:
+
+SQL > @script.sql
+The above command assumes that the file is in the current directory. (ie: the current directory is usually the directory that you were located in before you launched SQLPlus.)
+
+If you need to execute a script file that is not in the current directory, you would type:
+
+SQL > @{path}{file}
+For example:
+
+SQL > @/oracle/scripts/script.sql
+This command would run a script file called script.sql that was located in the /oracle/scripts directory.
+
+```
 
 #  ora-00054:resource busy and acquire with NOWAIT specified  
 
