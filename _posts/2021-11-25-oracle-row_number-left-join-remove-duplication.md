@@ -7,6 +7,24 @@ tags: []
 ---
 {% include JB/setup %}
 
+#  ora-00054:resource busy and acquire with NOWAIT specified  
+
+```
+select t2.username, t2.sid, t2.serial#, t2.logon_time
+from v$locked_object t1,
+     v$session t2
+where t1.session_id = t2.sid
+order by t2.logon_time;
+
+ALTER SYSTEM KILL SESSION '2291,8603';
+ALTER SYSTEM KILL SESSION 'SID,SERIAL#'; 
+
+//others
+select session_id from v$locked_object;
+SELECT sid, serial#, username, osuser FROM v$session where sid = 142;
+ALTER SYSTEM KILL SESSION '142,38';
+```
+
 # row_number() over(partition by order by )使用说明书
 ## 作用：数据库去除重复记录，进行排序。
 
