@@ -6,6 +6,18 @@ category:
 tags: []
 ---
 {% include JB/setup %}
+
+# oracle ORA-01704: string literal too long
+```
+
+declare
+    temp clob :='very long text';
+begin
+    INSERT INTO "DEMO_TABLE"("ID", "long_column") VALUES ('65',  temp );
+end;
+
+```
+
 # Oracle / PLSQL: Execute a SQL script file in SQLPlus
 
 ```
