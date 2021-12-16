@@ -17,4 +17,12 @@ scp user_name@xxx.xxx.xxx.xxx:/path/to/file .
 # .dot means current directory
 
 
+# 2.show wifi password
+$ sudo grep psk= /etc/NetworkManager/system-connections/*
+
+cd /etc/NetworkManager/system-connections/
+ls -a
+sudo cat [name of profile]
+
+
 ```
