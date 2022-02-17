@@ -7,6 +7,7 @@ tags: []
 ---
 {% include JB/setup %}
 
+[ref](https://www.saminiir.com/establish-cryptographic-identity-using-gnupg/)
 
 # Paper storage and recovery of GPG keys
 
